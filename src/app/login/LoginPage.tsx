@@ -49,7 +49,17 @@ export default function LoginPage() {
             />
             Continue with GitHub
           </button>
-
+          <button
+            onClick={() => signIn("facebook", { callbackUrl })}
+            className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
+          >
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Facebook"
+              className="w-5 h-5"
+            />
+            Continue with Facebook
+          </button>
           <button
             onClick={() => signIn("linkedin", { callbackUrl })}
             className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
