@@ -20,7 +20,8 @@ export async function POST(
     }
 
     const alreadyAnswered = participant.answers.some(
-      (a) => a.questionIndex === questionIndex
+      (a: { questionIndex: number }) =>
+        a.questionIndex === questionIndex
     );
     if (alreadyAnswered) {
       return NextResponse.json({ error: "Already answered" }, { status: 400 });
