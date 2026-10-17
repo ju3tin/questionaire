@@ -2,12 +2,14 @@
 
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function LoginPage() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") || "/admin";
 
   return (
+    <Suspense fallback={<div>Loading login...</div>}>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="bg-white p-10 rounded-2xl shadow-xl w-full max-w-md">
         <div className="text-center mb-8">
@@ -63,5 +65,6 @@ export default function LoginPage() {
         </p>
       </div>
     </div>
+    </Suspense>
   );
 }
