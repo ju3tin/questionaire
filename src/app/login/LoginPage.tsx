@@ -54,7 +54,7 @@ export default function LoginPage() {
             className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
           >
             <img
-              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              src="https://www.svgrepo.com/show/475647/facebook-color.svg"
               alt="Facebook"
               className="w-5 h-5"
             />
