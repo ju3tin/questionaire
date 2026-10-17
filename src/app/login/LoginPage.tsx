@@ -61,6 +61,17 @@ export default function LoginPage() {
             Continue with Facebook
           </button>
           <button
+            onClick={() => signIn("twitter", { callbackUrl })}
+            className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg"
+              alt="Twitter"
+              className="w-5 h-5"
+            />
+            Continue with Twitter
+          </button>
+          <button
             onClick={() => signIn("linkedin", { callbackUrl })}
             className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
           >
@@ -70,6 +81,17 @@ export default function LoginPage() {
               className="w-5 h-5"
             />
             Continue with LinkedIn
+          </button>
+          <button
+            onClick={() => signIn("instagram", { callbackUrl })}
+            className="w-full flex items-center justify-center gap-3 px-6 py-3.5 border border-gray-300 rounded-xl hover:bg-gray-50 transition font-medium"
+          >
+            <img
+              src="https://www.svgrepo.com/show/452229/instagram-1.svg"
+              alt="Instagram"
+              className="w-5 h-5"
+            />
+            Continue with Instagram
           </button>
         </div>
 
