@@ -31,8 +31,8 @@ export async function GET() {
           startedAt: s.startedAt,
           endedAt: s.endedAt,
           createdAt: s.createdAt,
-          questionnaireTitle: questionnaire?.title || "Unknown",
-          totalQuestions: questionnaire?.questions?.length || 0,
+          questionnaireTitle: s.title || "Unknown",
+          totalQuestions: s.questions?.length || 0,
           participantCount,
         };
       })
