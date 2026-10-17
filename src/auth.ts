@@ -2,6 +2,9 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import GitHub from "next-auth/providers/github";
+import Facebook from "next-auth/providers/facebook";
+import Twitter from "next-auth/providers/twitter";
+import Instagram from "next-auth/providers/instagram";
 import LinkedIn from "next-auth/providers/linkedin";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import clientPromise from "@/lib/mongodb-client";
@@ -23,6 +26,18 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     LinkedIn({
       clientId: process.env.AUTH_LINKEDIN_ID!,
       clientSecret: process.env.AUTH_LINKEDIN_SECRET!,
+    }),
+    Facebook({
+      clientId: process.env.AUTH_FACEBOOK_ID!,
+      clientSecret: process.env.AUTH_FACEBOOK_SECRET!,
+    }),
+    Twitter({
+      clientId: process.env.AUTH_TWITTER_ID!,
+      clientSecret: process.env.AUTH_TWITTER_SECRET!,
+    }),
+    Instagram({
+      clientId: process.env.AUTH_INSTAGRAM_ID!,
+      clientSecret: process.env.AUTH_INSTAGRAM_SECRET!,
     }),
   ],
   pages: {
